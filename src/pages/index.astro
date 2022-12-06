@@ -1,40 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Link from "../components/Link.astro";
 ---
 
 <Layout title="home">
-  <main class="text-4xl">
-    test test test test test tettttttttttttttttttttttst test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test test test test test test test test test test test test test test
-    test test
+  <main class="text-4xl font-mono font-semibold tracking-tight">
+    <header class="flex flex-row items-center justify-between py-6">
+      <div class="text-3xl">rubenbrandao</div>
+      <nav class="text-lg">
+        <Link href="/blog">home</Link>
+        <Link href="/about">about</Link>
+        <Link href="/projects">projects</Link>
+      </nav>
+    </header>
+    <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
   </main>
 </Layout>
