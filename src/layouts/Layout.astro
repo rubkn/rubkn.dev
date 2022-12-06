@@ -1,0 +1,61 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="an emo personal website" />
+
+    <!-- styles -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{`ruben/${title}`}</title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    @apply w-screen h-screen max-w-prose p-6 font-sans;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  *::selection {
+    background-color: none;
+    color: black;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+  }
+</style>
