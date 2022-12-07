@@ -1,31 +1,29 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  @apply box-border m-0 p-0;
 }
 
 *::selection {
-  background-color: none;
-  color: black;
+  @apply bg-none text-black-500;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  @apply bg-transparent;
 }
 
 ::-webkit-scrollbar {
-  background-color: transparent;
-  width: 8px;
-  height: 8px;
+  @apply bg-transparent w-2 p-2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 5px;
+  @apply bg-white-700 border;
 }
 
 body {
-  @apply w-screen h-screen max-w-prose m-auto p-6 font-sans;
+  @apply w-screen h-screen max-w-prose m-auto font-sans bg-white-500 text-black-500 dark:bg-black-500 dark:text-white-500;
+}
+
+a {
+  @apply hover:text-indigo-500 dark:hover:text-orange-500;
 }
