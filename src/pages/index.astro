@@ -1,12 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Link from "../components/Link.astro";
-import Header from "../components/Header.astro";
+import Main from "@layouts/Main.astro";
+import Card from "@components/Card.astro";
+import Header from "@components/header/Header.astro";
+import About from "@components/About.astro";
 ---
 
-<Layout title="home">
+<Main title="home">
   <main class="font-mono font-medium tracking-tight">
     <Header />
+    <About />
   </main>
-</Layout>
+</Main>
