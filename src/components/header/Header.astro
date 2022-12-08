@@ -1,0 +1,23 @@
+---
+import Burger from "./Burger";
+
+const links = [
+  { to: "/blog", label: "home" },
+  { to: "/about", label: "about" },
+  { to: "/projects", label: "projects" },
+];
+---
+
+<header class="flex flex-row items-center justify-between p-5 tracking-tighter">
+  <span class="text-xl cursor-pointer">rubenbrandao</span>
+  <nav class="invisible md:visible space-x-5">
+    {
+      links.map((link) => {
+        return <a href={link.to}>{link.label}</a>;
+      })
+    }
+  </nav>
+
+  <Burger client:load />
+</header>
+<hr class="mx-5 h-px bg-neutral-300 border-0" />
