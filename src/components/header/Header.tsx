@@ -26,7 +26,7 @@ const Header = () => {
     <header className="flex flex-col justify-between tracking-tighter">
       <div className="flex flex-row items-center justify-between p-5">
         <span className="text-xl cursor-pointer">rubenbrandao</span>
-        <nav className="invisible sm:hidden space-x-5">
+        <nav className="invisible sm:visible space-x-5">
           {links.map((link) => {
             return <a href={link.to}>{link.label}</a>;
           })}
