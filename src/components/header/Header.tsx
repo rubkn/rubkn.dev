@@ -25,7 +25,9 @@ const Header = () => {
   return (
     <header className="flex flex-col justify-between tracking-tighter">
       <div className="flex flex-row items-center justify-between p-5">
-        <span className="text-xl cursor-pointer">rubenbrandao</span>
+        <span className="cursor-pointer text-xl md:text-2xl lg:text-3xl">
+          rubenbrandao
+        </span>
         <nav className="invisible sm:visible space-x-5">
           {links.map((link) => {
             return <a href={link.to}>{link.label}</a>;
@@ -48,7 +50,11 @@ const Header = () => {
       {isOpen && (
         <nav className="flex flex-col items-start p-5 space-y-5">
           {links.map((link) => {
-            return <a href={link.to}>{link.label}</a>;
+            return (
+              <a className="md:text-2xl lg:text-3xl" href={link.to}>
+                {link.label}
+              </a>
+            );
           })}
         </nav>
       )}
