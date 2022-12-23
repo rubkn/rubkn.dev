@@ -28,7 +28,7 @@ const Header = () => {
         <a className="cursor-pointer text-xl md:text-2xl lg:text-3xl" href="/">
           rubenbrandao
         </a>
-        {/* <nav className="invisible sm:visible space-x-5">
+        <nav className="invisible sm:visible space-x-5">
           {links.map((link) => {
             return (
               <a href={link.to} key={link.label}>
@@ -36,7 +36,7 @@ const Header = () => {
               </a>
             );
           })}
-        </nav> */}
+        </nav>
         <div className="sm:hidden flex flex-col cursor-pointer">
           <svg
             onClick={() => toggle(!isOpen)}
