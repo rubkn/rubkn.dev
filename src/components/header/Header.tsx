@@ -25,14 +25,18 @@ const Header = () => {
   return (
     <header className="flex flex-col justify-between tracking-tighter">
       <div className="flex flex-row items-center justify-between p-5">
-        <span className="cursor-pointer text-xl md:text-2xl lg:text-3xl">
+        <a className="cursor-pointer text-xl md:text-2xl lg:text-3xl" href="/">
           rubenbrandao
-        </span>
-        <nav className="invisible sm:visible space-x-5">
+        </a>
+        {/* <nav className="invisible sm:visible space-x-5">
           {links.map((link) => {
-            return <a href={link.to}>{link.label}</a>;
+            return (
+              <a href={link.to} key={link.label}>
+                {link.label}
+              </a>
+            );
           })}
-        </nav>
+        </nav> */}
         <div className="sm:hidden flex flex-col cursor-pointer">
           <svg
             onClick={() => toggle(!isOpen)}
