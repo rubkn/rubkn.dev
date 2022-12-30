@@ -6,7 +6,6 @@ import { usePinnedRepos } from "@utils/usePinnedRepos";
 import samplePinned from "../../__fixtures__/samplePinnedRepos";
 
 const { pinnedItems } = await usePinnedRepos();
-console.log(pinnedItems);
 ---
 
 <Main title="home">
@@ -42,7 +41,7 @@ console.log(pinnedItems);
     <hr class="w-full h-px mx-5 bg-neutral-300 border-0" />
     <section class="w-full grid grid-cols-2 gap-4 px-5 py-10">
       {
-        samplePinned.map((item) => (
+        pinnedItems.map((item) => (
           <Repository
             name={item.name}
             description={item.description}

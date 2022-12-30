@@ -8,11 +8,11 @@ const Repo = ({ name, description, stars, forks, languages }) => {
       target="_blank"
       className="hover:no-underline gap-2"
     >
-      <div className="max-h-48 p-4 flex flex-col justify-between border border-black-100 bg-black-500 hover:scale-105 ease-out transition-transform rounded-xl space-y-2">
+      <div className="h-40 p-4 flex flex-col justify-between border border-black-100 bg-black-500 hover:scale-105 ease-out transition-transform rounded-xl space-y-2">
         {/* basic info */}
         <div className="flex flex-col gap-y-2">
           <p className="text-xl font-medium">{name}</p>
-          <p className="text-(sm neutral-200)">{description}</p>
+          <p className="text-sm">{description}</p>
         </div>
 
         <div className="flex flex-row justify-between items-center">
