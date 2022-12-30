@@ -1,7 +1,11 @@
 import { Fragment, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 
-import { links } from "@utils/links";
+const links = [
+  { to: "/blog", label: "blog" },
+  { to: "/about", label: "about" },
+  { to: "/projects", label: "projects" },
+];
 
 const Header = () => {
   const [isOpen, toggle] = useState<boolean>(false);
@@ -42,7 +46,7 @@ const Header = () => {
             onClick={() => toggle(!isOpen)}
             className="w-5 h-5"
             viewBox="0 0 44 44"
-            fill="black"
+            fill="white"
             xmlns="http://www.w3.org/2000/svg"
           >
             <animated.rect className="w-10 h-1" style={first} />

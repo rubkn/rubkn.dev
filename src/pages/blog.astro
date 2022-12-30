@@ -1,0 +1,26 @@
+---
+import Posts from "@components/Posts";
+import Header from "@components/Header";
+import Main from "@layouts/Main.astro";
+
+import { Post } from "../types";
+
+const posts = (await Astro.glob<Post>("./blog/*.{md,mdx}"))
+  .filter((post) => !post.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  );
+---
+
+<Main title="blog">
+  <main class="font-mono font-medium tracking-tight">
+    <Header client:load />
+    <section class="flex flex-col items-start p-5 tracking-tighter">
+      <h1 class="pb-6">Blog</h1>
+
+      <Posts posts={posts} client:load />
+    </section>
+  </main>
+</Main>

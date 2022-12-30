@@ -1,12 +1,18 @@
 ---
 import Main from "@layouts/Main.astro";
-import Header from "@components/header/Header";
+import Header from "@components/Header";
+import Repository from "@components/Repository";
+import { usePinnedRepos } from "@utils/usePinnedRepos";
+import samplePinned from "../../__fixtures__/samplePinnedRepos";
+
+const { pinnedItems } = await usePinnedRepos();
+console.log(pinnedItems);
 ---
 
 <Main title="home">
-  <main class="font-mono font-medium tracking-tight">
+  <main class="font-test font-medium tracking-tight w-full h-screen">
     <Header client:load />
-    <section class="flex flex-col items-start p-5 tracking-tighter">
+    <section class="flex flex-col items-start px-5 py-10 tracking-tighter">
       <h1 class="text-3xl font-bold py-3">Hello!</h1>
 
       <p class="py-4">
@@ -17,19 +23,13 @@ import Header from "@components/header/Header";
         want to chat!
       </p>
 
-      <a class="hover:text-neutral-500" href="mailto:rubenavbrandao@gmail.com"
-        >rubenavbrandao@gmail.com</a
-      >
-      <a class="hover:text-neutral-500" href="https://github.com/rubkn"
-        >github.com/rubkn</a
-      >
-      <a
-        class="hover:text-neutral-500"
-        href="https://www.linkedin.com/in/rubenvbrandao/"
+      <a href="https://www.linkedin.com/in/rubenvbrandao/"
         >linkedin.com/rubenvbrandao</a
       >
+      <a href="mailto:rubenavbrandao@gmail.com">rubenavbrandao@gmail.com</a>
+      <a href="https://github.com/rubkn">github.com/rubkn</a>
 
-      <div class="flex flex-row py-3 space-x-2 items-end">
+      <!-- <div class="flex flex-row py-3 space-x-2 items-end">
         <a type="button" href="https://github.com/ruvkn">
           <svg stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
             <path
@@ -37,7 +37,21 @@ import Header from "@components/header/Header";
             ></path>
           </svg>
         </a>
-      </div>
+      </div> -->
+    </section>
+    <hr class="w-full h-px mx-5 bg-neutral-300 border-0" />
+    <section class="w-full grid grid-cols-2 gap-4 px-5 py-10">
+      {
+        samplePinned.map((item) => (
+          <Repository
+            name={item.name}
+            description={item.description}
+            stars={item.stargazerCount}
+            forks={item.forkCount}
+            languages={item.languages}
+          />
+        ))
+      }
     </section>
   </main>
 </Main>
