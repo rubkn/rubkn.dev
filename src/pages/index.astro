@@ -9,10 +9,10 @@ const { pinnedItems } = await usePinnedRepos();
 ---
 
 <Main title="home">
-  <main class="font-test font-medium tracking-tight w-full h-screen">
+  <main class="h-screen w-full font-test font-medium tracking-tight">
     <Header client:load />
     <section class="flex flex-col items-start px-5 py-10 tracking-tighter">
-      <h1 class="text-3xl font-bold py-3">Hello!</h1>
+      <h1 class="py-3 text-3xl font-bold">Ruben Brandão!</h1>
 
       <p class="py-4">
         Hello and welcome to my website! I apologize for any inconvenience, but
@@ -38,8 +38,8 @@ const { pinnedItems } = await usePinnedRepos();
         </a>
       </div> -->
     </section>
-    <hr class="w-full h-px mx-5 bg-neutral-300 border-0" />
-    <section class="w-full grid grid-cols-2 gap-4 px-5 py-10">
+    <hr class="mx-5 h-px border-0 bg-neutral-300" />
+    <section class="grid w-full grid-cols-2 gap-4 px-5 py-10">
       {
         pinnedItems.map((item) => (
           <Repository

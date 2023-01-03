@@ -6,19 +6,19 @@ const Repo = ({ name, description, stars, forks, languages }) => {
     <a
       href={`https://github.com/rubkn/${name}`}
       target="_blank"
-      className="hover:no-underline gap-2"
+      className="gap-2 hover:no-underline"
     >
-      <div className="h-40 p-4 flex flex-col justify-between border border-black-100 bg-black-500 hover:scale-105 ease-out transition-transform rounded-xl space-y-2">
+      <div className="flex h-40 flex-col justify-between space-y-2 rounded-xl border border-black-100 bg-black-500 p-4 transition-transform ease-out hover:scale-105">
         {/* basic info */}
         <div className="flex flex-col gap-y-2">
           <p className="text-xl font-medium">{name}</p>
           <p className="text-sm">{description}</p>
         </div>
 
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row items-center justify-between">
           {/* langs
         TODO: use the lang colors */}
-          <div className="flex flex-col w-full text-xs">
+          <div className="flex w-full flex-col text-xs">
             {Object.entries(languages).map(([language, color]) => (
               <li key={language} className="list-none">
                 {language}

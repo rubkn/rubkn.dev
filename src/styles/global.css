@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  @apply box-border m-0 p-0;
+  @apply m-0 box-border p-0;
 }
 
 *::selection {
@@ -13,17 +13,17 @@
 }
 
 ::-webkit-scrollbar {
-  @apply bg-transparent w-2 p-2;
+  @apply w-2 bg-transparent p-2;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white-700 border;
+  @apply border bg-white-700;
 }
 
 body {
-  @apply w-screen h-screen max-w-prose m-auto font-sans bg-black-500 text-white-500 bg-topography bg-blend-color-burn /* dark:bg-black-500 dark:text-white-500 */;
+  @apply m-auto h-screen w-screen max-w-prose bg-black-500 bg-topography font-sans text-white-500 bg-blend-color-burn;
 }
 
 a {
-  @apply hover:text-indigo-500 transition-all /* dark:hover:text-orange-500 */;
+  @apply transition-all hover:text-indigo-500;
 }

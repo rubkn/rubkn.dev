@@ -32,7 +32,7 @@ const Header = () => {
         <a className="cursor-pointer text-xl md:text-2xl lg:text-3xl" href="/">
           rubenbrandao
         </a>
-        <nav className="invisible sm:visible space-x-5">
+        <nav className="invisible space-x-5 sm:visible">
           {links.map((link) => {
             return (
               <a href={link.to} key={link.label}>
@@ -41,22 +41,22 @@ const Header = () => {
             );
           })}
         </nav>
-        <div className="sm:hidden flex flex-col cursor-pointer">
+        <div className="flex cursor-pointer flex-col sm:hidden">
           <svg
             onClick={() => toggle(!isOpen)}
-            className="w-5 h-5"
+            className="h-5 w-5"
             viewBox="0 0 44 44"
             fill="white"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <animated.rect className="w-10 h-1" style={first} />
-            <animated.rect className="w-10 h-1" style={second} />
-            <animated.rect className="w-5 h-1" style={third} />
+            <animated.rect className="h-1 w-10" style={first} />
+            <animated.rect className="h-1 w-10" style={second} />
+            <animated.rect className="h-1 w-5" style={third} />
           </svg>
         </div>
       </div>
       {isOpen && (
-        <nav className="flex flex-col items-start p-5 space-y-5">
+        <nav className="flex flex-col items-start space-y-5 p-5">
           {links.map((link) => {
             return (
               <a className="md:text-2xl lg:text-3xl" href={link.to}>
@@ -66,7 +66,7 @@ const Header = () => {
           })}
         </nav>
       )}
-      <hr className="mx-5 h-px bg-neutral-300 border-0" />
+      <hr className="mx-5 h-px border-0 bg-neutral-300" />
     </header>
   );
 };
