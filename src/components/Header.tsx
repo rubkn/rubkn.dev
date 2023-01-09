@@ -66,7 +66,7 @@ const Header = () => {
           })}
         </nav>
       )}
-      <hr className="mx-5 h-px border-0 bg-neutral-300" />
+      <hr className="mx-5 h-px border-0 bg-black-400" />
     </header>
   );
 };

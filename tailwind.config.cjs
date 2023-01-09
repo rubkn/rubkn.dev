@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        mono: ["IBM Plex Mono", "monospaced"],
-        test: ["Roboto Mono", "monospaced"],
+        inter: ["Inter Tight", "sans-serif"],
+        mono: ["Roboto Mono", "monospaced"],
       },
       colors: {
         black: {

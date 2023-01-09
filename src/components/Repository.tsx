@@ -8,7 +8,7 @@ const Repo = ({ name, description, stars, forks, languages }) => {
       target="_blank"
       className="gap-2 hover:no-underline"
     >
-      <div className="flex h-40 flex-col justify-between space-y-2 rounded-xl border border-black-100 bg-black-500 p-4 transition-transform ease-out hover:scale-105">
+      <div className="flex h-40 flex-col justify-between space-y-2 rounded-md border border-black-400 bg-black-500 p-4 transition-transform ease-out hover:scale-105">
         {/* basic info */}
         <div className="flex flex-col gap-y-2">
           <p className="text-xl font-medium">{name}</p>

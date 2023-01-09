@@ -21,9 +21,9 @@
 }
 
 body {
-  @apply m-auto h-screen w-screen max-w-prose bg-black-500 bg-topography font-sans text-white-500 bg-blend-color-burn;
+  @apply m-auto h-screen w-screen max-w-prose bg-black-500 bg-topography font-inter text-white-500 bg-blend-color-burn;
 }
 
 a {
-  @apply transition-all hover:text-indigo-500;
+  @apply transition-all hover:text-black-200;
 }
